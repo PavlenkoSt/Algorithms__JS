@@ -9,20 +9,20 @@ const binarySearchCycle = (array, searchValue) => {
     let complete = false;
     let count = 0;
 
-    while(!complete && start <= end){
+    while (!complete && start <= end) {
 
         count++ ;
-        middle = Math.floor((end + start) / 2);
+        middle = Math.floor( (end + start) / 2 );
 
-        if(array[middle] === searchValue){
+        if (array[middle] === searchValue) {
             complete = true;
-            return `Элемент ${searchValue} по индексу ${middle} был найден за ${count} итераций`
+            return `Элемент ${searchValue} по индексу ${middle} был найден за ${count} итераций`;
         }
 
-        if(array[middle] < searchValue){
+        if (array[middle] < searchValue) {
             start = middle;
-        }else{
-            end = middle
+        } else {
+            end = middle;
         }
 
     }
